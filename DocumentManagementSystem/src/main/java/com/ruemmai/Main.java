@@ -10,6 +10,7 @@ public class Main {
 
         try {
             documentManagementSystem.importFile(RESOURCES + "jose-oliveira.letter");
+            documentManagementSystem.importFile(RESOURCES + "jose-oliveira.invoice");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (UnknownFileTypeException e) {
