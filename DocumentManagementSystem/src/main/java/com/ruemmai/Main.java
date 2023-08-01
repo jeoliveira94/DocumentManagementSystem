@@ -11,6 +11,8 @@ public class Main {
         try {
             documentManagementSystem.importFile(RESOURCES + "jose-oliveira.letter");
             documentManagementSystem.importFile(RESOURCES + "jose-oliveira.invoice");
+            documentManagementSystem.importFile(RESOURCES + "jose-oliveira.report");
+            documentManagementSystem.importFile(RESOURCES + "jose-oliveira.png");
         } catch (IOException e) {
             throw new RuntimeException(e);
         } catch (UnknownFileTypeException e) {

@@ -13,7 +13,10 @@ public class DocumentManagementSystem {
     private final List<Document> documents = new ArrayList<>();
 
     public DocumentManagementSystem() {
-        extensionToImporter.put("jpg", new ImageImporter());
+        extensionToImporter.put("letter", new LetterImporter());
+        extensionToImporter.put("report", new ReportImporter());
+        extensionToImporter.put("png", new ImageImporter());
+        extensionToImporter.put("invoice", new InvoiceImporter());
     }
 
     public void importFile(final String path) throws IOException, UnknownFileTypeException {
@@ -34,4 +37,6 @@ public class DocumentManagementSystem {
         final Document document = importer.importFile(file);
         documents.add(document);
     }
+
+
 }
